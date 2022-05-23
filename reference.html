@@ -415,7 +415,7 @@ Initializes instance CyberGISCompute using inputs from the client
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_job_by_id">
-<span class="sig-name descname"><span class="pre">get_job_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/CyberGISCompute.html#CyberGISCompute.get_job_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_job_by_id" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_job_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printJob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/CyberGISCompute.html#CyberGISCompute.get_job_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_job_by_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns Job object with the specified id
 :param id: Job id
 :type id: int</p>
@@ -562,7 +562,7 @@ or displayed directly into the interface</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cybergis_compute_client.CyberGISCompute.CyberGISCompute.login">
-<span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manualLogin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/CyberGISCompute.html#CyberGISCompute.login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.CyberGISCompute.CyberGISCompute.login" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manualLogin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printJob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/CyberGISCompute.html#CyberGISCompute.login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.CyberGISCompute.CyberGISCompute.login" title="Permalink to this definition"></a></dt>
 <dd><p>Authenticates the client’s jupyterhubApiToken and gives them access
 to CyberGISCompute features
 :param manualLogin: set to True if env variable and file login modes are not available
@@ -1288,6 +1288,11 @@ Returns: (dict) Information about the job submitted (template, computing resourc
 <span class="sig-name descname"><span class="pre">renderParam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/UI.html#UI.renderParam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.UI.UI.renderParam" title="Permalink to this definition"></a></dt>
 <dd><p>Displays input areas for the job parameters</p>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cybergis_compute_client.UI.UI.renderRecentlySubmittedJobs">
+<span class="sig-name descname"><span class="pre">renderRecentlySubmittedJobs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cybergis_compute_client/UI.html#UI.renderRecentlySubmittedJobs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cybergis_compute_client.UI.UI.renderRecentlySubmittedJobs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cybergis_compute_client.UI.UI.renderRefreshButton">
