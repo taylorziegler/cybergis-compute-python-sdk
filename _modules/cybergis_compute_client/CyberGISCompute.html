@@ -3,7 +3,6 @@
 <span class=sd >This module exposes CyberGISCompute class which creates a CyberGISCompute</span>
 <span class=sd >object that serves as an entry point to the CyberGISX environment from a Python/Jupyter notebook.</span>
 <span class=sd >All interactions with the High Performance Computing (HPC) backend are performed using this object.</span>
-
 <span class=sd >Example:</span>
 <span class=sd >        cybergis = CyberGISCompute(url='localhost', port='3030', protocol='HTTP', isJupyter=False)</span>
 <span class=sd >"""</span>
@@ -60,7 +59,7 @@
         <span class=bp >self</span><span class=o >.</span><span class=n >job</span> <span class=o >=</span> <span class=kc >None</span>
         <span class=bp >self</span><span class=o >.</span><span class=n >recentDownloadPath</span> <span class=o >=</span> <span class=kc >None</span>
 
-<div class=viewcode-block  id=CyberGISCompute.login ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.CyberGISCompute.CyberGISCompute.login">[docs]</a>    <span class=k >def</span> <span class=nf >login</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=n >manualLogin</span><span class=o >=</span><span class=kc >True</span><span class=p >,</span> <span class=n >printJob</span><span class=o >=</span><span class=kc >True</span><span class=p >):</span>
+<div class=viewcode-block  id=CyberGISCompute.login ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.CyberGISCompute.CyberGISCompute.login">[docs]</a>    <span class=k >def</span> <span class=nf >login</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=n >manualLogin</span><span class=o >=</span><span class=kc >True</span><span class=p >):</span>
         <span class=sd >"""</span>
 <span class=sd >        Authenticates the client's jupyterhubApiToken and gives them access</span>
 <span class=sd >        to CyberGISCompute features</span>
@@ -70,8 +69,7 @@
 <span class=sd >            None</span>
 <span class=sd >        """</span>
         <span class=k >if</span> <span class=bp >self</span><span class=o >.</span><span class=n >jupyterhubApiToken</span> <span class=ow >is</span> <span class=ow >not</span> <span class=kc >None</span><span class=p >:</span>
-            <span class=k >if</span> <span class=n >printJob</span><span class=p >:</span>
-                <span class=nb >print</span><span class=p >(</span><span class=s1 >'🎯 Logged in as '</span> <span class=o >+</span> <span class=bp >self</span><span class=o >.</span><span class=n >username</span><span class=p >)</span>
+            <span class=nb >print</span><span class=p >(</span><span class=s1 >'🎯 Logged in as '</span> <span class=o >+</span> <span class=bp >self</span><span class=o >.</span><span class=n >username</span><span class=p >)</span>
             <span class=k >return</span>
 
         <span class=c1 ># login via env variable</span>
@@ -141,7 +139,7 @@
         <span class=bp >self</span><span class=o >.</span><span class=n >login</span><span class=p >()</span>
         <span class=k >return</span> <span class=n >Job</span><span class=p >(</span><span class=n >maintainer</span><span class=o >=</span><span class=n >maintainer</span><span class=p >,</span> <span class=n >hpc</span><span class=o >=</span><span class=n >hpc</span><span class=p >,</span> <span class=nb >id</span><span class=o >=</span><span class=kc >None</span><span class=p >,</span> <span class=n >hpcUsername</span><span class=o >=</span><span class=n >hpcUsername</span><span class=p >,</span> <span class=n >hpcPassword</span><span class=o >=</span><span class=n >hpcPassword</span><span class=p >,</span> <span class=n >client</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >client</span><span class=p >,</span> <span class=n >isJupyter</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >isJupyter</span><span class=p >,</span> <span class=n >jupyterhubApiToken</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >jupyterhubApiToken</span><span class=p >,</span> <span class=n >printJob</span><span class=o >=</span><span class=n >printJob</span><span class=p >)</span></div>
 
-<div class=viewcode-block  id=CyberGISCompute.get_job_by_id ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_job_by_id">[docs]</a>    <span class=k >def</span> <span class=nf >get_job_by_id</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=nb >id</span><span class=o >=</span><span class=kc >None</span><span class=p >,</span> <span class=n >printJob</span><span class=o >=</span><span class=kc >True</span><span class=p >):</span>
+<div class=viewcode-block  id=CyberGISCompute.get_job_by_id ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_job_by_id">[docs]</a>    <span class=k >def</span> <span class=nf >get_job_by_id</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=nb >id</span><span class=o >=</span><span class=kc >None</span><span class=p >):</span>
         <span class=sd >"""</span>
 <span class=sd >        Returns Job object with the specified id</span>
 <span class=sd >        Args:</span>
@@ -149,7 +147,7 @@
 <span class=sd >        Returns</span>
 <span class=sd >            (Job)                   : Job object with the specified id otherwise None</span>
 <span class=sd >        """</span>
-        <span class=bp >self</span><span class=o >.</span><span class=n >login</span><span class=p >(</span><span class=n >printJob</span><span class=o >=</span><span class=n >printJob</span><span class=p >)</span>
+        <span class=bp >self</span><span class=o >.</span><span class=n >login</span><span class=p >()</span>
         <span class=n >jobs</span> <span class=o >=</span> <span class=bp >self</span><span class=o >.</span><span class=n >client</span><span class=o >.</span><span class=n >request</span><span class=p >(</span><span class=s1 >'GET'</span><span class=p >,</span> <span class=s1 >'/user/job'</span><span class=p >,</span> <span class=p >{</span><span class=s2 >"jupyterhubApiToken"</span><span class=p >:</span> <span class=bp >self</span><span class=o >.</span><span class=n >jupyterhubApiToken</span><span class=p >})</span>
         <span class=n >token</span> <span class=o >=</span> <span class=kc >None</span>
         <span class=k >for</span> <span class=n >job</span> <span class=ow >in</span> <span class=n >jobs</span><span class=p >[</span><span class=s1 >'job'</span><span class=p >]:</span>
@@ -157,7 +155,7 @@
                 <span class=n >token</span> <span class=o >=</span> <span class=n >job</span><span class=p >[</span><span class=s1 >'secretToken'</span><span class=p >]</span>
         <span class=k >if</span> <span class=p >(</span><span class=n >token</span> <span class=ow >is</span> <span class=kc >None</span><span class=p >):</span>
             <span class=nb >print</span><span class=p >(</span><span class=s1 >'❌ job with id '</span> <span class=o >+</span> <span class=nb >id</span> <span class=o >+</span> <span class=s1 >' was not found'</span><span class=p >)</span>
-        <span class=k >return</span> <span class=n >Job</span><span class=p >(</span><span class=n >secretToken</span><span class=o >=</span><span class=n >token</span><span class=p >,</span> <span class=n >client</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >client</span><span class=p >,</span> <span class=nb >id</span><span class=o >=</span><span class=nb >id</span><span class=p >,</span> <span class=n >isJupyter</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >isJupyter</span><span class=p >,</span> <span class=n >jupyterhubApiToken</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >jupyterhubApiToken</span><span class=p >,</span> <span class=n >printJob</span><span class=o >=</span><span class=n >printJob</span><span class=p >)</span></div>
+        <span class=k >return</span> <span class=n >Job</span><span class=p >(</span><span class=n >secretToken</span><span class=o >=</span><span class=n >token</span><span class=p >,</span> <span class=n >client</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >client</span><span class=p >,</span> <span class=nb >id</span><span class=o >=</span><span class=nb >id</span><span class=p >,</span> <span class=n >isJupyter</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >isJupyter</span><span class=p >,</span> <span class=n >jupyterhubApiToken</span><span class=o >=</span><span class=bp >self</span><span class=o >.</span><span class=n >jupyterhubApiToken</span><span class=p >)</span></div>
 
 <div class=viewcode-block  id=CyberGISCompute.get_slurm_usage ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.CyberGISCompute.CyberGISCompute.get_slurm_usage">[docs]</a>    <span class=k >def</span> <span class=nf >get_slurm_usage</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=n >raw</span><span class=o >=</span><span class=kc >False</span><span class=p >):</span>
         <span class=sd >"""</span>
