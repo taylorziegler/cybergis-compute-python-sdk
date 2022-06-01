@@ -547,14 +547,11 @@
             <span class=bp >self</span><span class=o >.</span><span class=n >compute</span><span class=o >.</span><span class=n >job</span> <span class=o >=</span> <span class=n >job</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >jupyter_globus</span> <span class=o >=</span> <span class=bp >self</span><span class=o >.</span><span class=n >compute</span><span class=o >.</span><span class=n >get_user_jupyter_globus</span><span class=p >()</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >globus_filename</span> <span class=o >=</span> <span class=s1 >'globus_download_'</span> <span class=o >+</span> <span class=bp >self</span><span class=o >.</span><span class=n >compute</span><span class=o >.</span><span class=n >job</span><span class=o >.</span><span class=n >id</span>
-            <span class=n >resultFolder</span> <span class=o >=</span> <span class=s1 >'globus://'</span> <span class=o >+</span> <span class=bp >self</span><span class=o >.</span><span class=n >jupyter_globus</span><span class=p >[</span><span class=s1 >'endpoint'</span><span class=p >]</span> <span class=o >+</span> <span class=s1 >':'</span> <span class=o >+</span> <span class=n >os</span><span class=o >.</span><span class=n >path</span><span class=o >.</span><span class=n >join</span><span class=p >(</span><span class=bp >self</span><span class=o >.</span><span class=n >jupyter_globus</span><span class=p >[</span><span class=s1 >'root_path'</span><span class=p >],</span> <span class=bp >self</span><span class=o >.</span><span class=n >globus_filename</span><span class=p >)</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >tab</span><span class=o >.</span><span class=n >selected_index</span> <span class=o >=</span> <span class=mi >1</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >submitted</span> <span class=o >=</span> <span class=kc >True</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >tab</span><span class=o >.</span><span class=n >set_title</span><span class=p >(</span><span class=mi >1</span><span class=p >,</span> <span class=s1 >'⏳ Your Job Status'</span><span class=p >)</span>
             <span class=bp >self</span><span class=o >.</span><span class=n >rerender</span><span class=p >([</span><span class=s1 >'resultStatus'</span><span class=p >,</span> <span class=s1 >'resultEvents'</span><span class=p >,</span> <span class=s1 >'resultLogs'</span><span class=p >,</span> <span class=s1 >'submit'</span><span class=p >])</span>
         <span class=k >return</span> <span class=n >on_click</span></div>
-            
-
 
     <span class=c1 ># helpers</span>
 <div class=viewcode-block  id=UI.init ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.UI.UI.init">[docs]</a>    <span class=k >def</span> <span class=nf >init</span><span class=p >(</span><span class=bp >self</span><span class=p >):</span>
@@ -593,7 +590,6 @@
         <span class=bp >self</span><span class=o >.</span><span class=n >job</span> <span class=o >=</span> <span class=bp >self</span><span class=o >.</span><span class=n >jobs</span><span class=p >[</span><span class=bp >self</span><span class=o >.</span><span class=n >jobName</span><span class=p >]</span>
         <span class=bp >self</span><span class=o >.</span><span class=n >hpcName</span> <span class=o >=</span> <span class=bp >self</span><span class=o >.</span><span class=n >job</span><span class=p >[</span><span class=s1 >'default_hpc'</span><span class=p >]</span>
         <span class=bp >self</span><span class=o >.</span><span class=n >hpc</span> <span class=o >=</span> <span class=bp >self</span><span class=o >.</span><span class=n >hpcs</span><span class=p >[</span><span class=bp >self</span><span class=o >.</span><span class=n >hpcName</span><span class=p >]</span></div>
-
 
 <div class=viewcode-block  id=UI.rerender ><a class=viewcode-back  href="../../reference.html#cybergis_compute_client.UI.UI.rerender">[docs]</a>    <span class=k >def</span> <span class=nf >rerender</span><span class=p >(</span><span class=bp >self</span><span class=p >,</span> <span class=n >components</span><span class=o >=</span><span class=p >[]):</span>
         <span class=sd >"""</span>
